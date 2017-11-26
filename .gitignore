@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 bundle.js
 package-lock.json
+.vscode
