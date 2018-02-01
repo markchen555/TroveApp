@@ -6,7 +6,7 @@ const db = require('../db/db');
 require('../db/model/dataModel')
 const route = require('../server/router/routes')
 
-const compression = require('compression');
+// const compression = require('compression');
 const helmet = require('helmet')
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -19,7 +19,7 @@ const app = express()
 app.set('port', (process.env.PORT || 3000))
 
 if (isProd) {
-  app.use(compression());
+  // app.use(compression());
   app.use(helmet());
 }
 
