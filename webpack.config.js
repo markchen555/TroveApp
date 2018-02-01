@@ -1,7 +1,7 @@
 const path = require('path');
 
 const webpackConfig = {
-  devtool: 'eval',
+  devtool: 'source-map',
   entry: path.resolve(__dirname, './client/src/index.js'),
   output: {
     path: path.resolve(__dirname, './client/static'),
