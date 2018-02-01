@@ -1,0 +1,8 @@
+{
+  "name": "TroveApp Backend",
+  "Description": "Trove application backend server",
+  "repository": "https://github.com/markchen555/TroveApp",
+  "logo": "https://github.com/markchen555/TroveApp/blob/master/client/static/favicon-96x96.png",
+  "keywords": ["node", "express"],
+  "image": "https://github.com/markchen555/TroveApp/tree/master/client/static" 
+}
