@@ -6,9 +6,10 @@ const db = require('../db/db');
 require('../db/model/dataModel')
 const route = require('../server/router/routes')
 
-const PORT = 3000;
+// const PORT = 3000;
 
 const app = express()
+app.set('port', (process.env.PORT || 3000))
 .use(parser.json())
 .use(parser.urlencoded({extended: true}))
 .use(morgan('dev'))
@@ -17,6 +18,6 @@ const app = express()
 .get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/static', 'index.html'));
 })
-.listen(PORT, function(){
-  console.log(`Listening on port ${PORT}`)
+.listen(app.get('port'), function(){
+  console.log(`Listening on port ${app.get('port')}`)
 })

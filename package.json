@@ -8,9 +8,16 @@
     "start": "nodemon server/server.js",
     "compile": "webpack --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "author": "theFlowerPetals",
   "license": "ISC",
+  "engines": {
+    "node": ">= 6.10.3"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
