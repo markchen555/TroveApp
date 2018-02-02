@@ -20,8 +20,7 @@ app.set('port', (process.env.PORT || 3000))
 
 if (isProd) {
   app.use(compression());
-  app.use(helmet());
-  app.disable('x-powered-by')
+  // app.use(helmet());
   app.use(morgan('common'))
 }
 
