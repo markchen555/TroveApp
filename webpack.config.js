@@ -1,7 +1,7 @@
 const path = require('path');
+const webpack = require('webpack')
 
 const webpackConfig = {
-  devtool: 'source-map',
   entry: path.resolve(__dirname, './client/src/index.js'),
   output: {
     path: path.resolve(__dirname, './client/static'),
@@ -14,6 +14,20 @@ const webpackConfig = {
     extensions: ['.js', '.jsx'],
   },
   devtool: 'inline-source-map',
+  plugins: [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
 };
 
 webpackConfig.module.loaders.push({
