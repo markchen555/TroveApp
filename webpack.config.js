@@ -2,9 +2,10 @@ const path = require('path');
 const webpack = require('webpack')
 
 const webpackConfig = {
-  entry: path.resolve(__dirname, './client/src/index.js'),
+  devtool: 'source-map',
+  entry: path.join(__dirname, './client/src/index.js'),
   output: {
-    path: path.resolve(__dirname, './client/static'),
+    path: path.join(__dirname, './client/static'),
     filename: 'bundle.js',
   },
   module: {
@@ -13,6 +14,20 @@ const webpackConfig = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
 };
 
 webpackConfig.module.loaders.push({
