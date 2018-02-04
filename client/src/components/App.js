@@ -244,7 +244,7 @@ class App extends Component {
             showCartState={this.state.viewCart}
             renterId = {this.state.userId} />
           </div>
-          <div onClick={() => this.hideCart()}>
+          <div class="content" onClick={() => this.hideCart()}>
           <Switch>
             <Route exact path='/' component={() => (
               <Home 
