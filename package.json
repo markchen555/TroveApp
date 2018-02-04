@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=production nodemon server.js",
-    "start": "npm run build && NODE_ENV=production nodemon server.js",
+    "dev": "NODE_ENV=production nodemon server/server.js",
+    "start": "npm run build && NODE_ENV=production nodemon server/server.js",
     "build": "NODE_ENV=production webpack --config webpack.config.js",
     "compile": "webpack --watch",
     "postinstall": "webpack -p --config webpack.config.js --progress"

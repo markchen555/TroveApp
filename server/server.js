@@ -14,6 +14,9 @@ const isProd = process.env.NODE_ENV === 'production';
 
 
 // const PORT = 3000;
+// Heroku push: git push heroku master
+// Heroku navigate: heroku open
+// Heroku log cmd: heroku logs --tail --app troveapp
 
 const app = express()
 app.set('port', (process.env.PORT || 3000))
