@@ -391,7 +391,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(48,48,48,.9);
-  padding-bottom: 70px;
+  padding-bottom: 20vh;
 }
 
 .log-reg-section {
